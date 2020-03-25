@@ -1,0 +1,40 @@
+inherit_gem:
+  google-style: google-style.yml
+
+AllCops:
+  Exclude:
+    - "perxtech-ml.gemspec"
+    - "lib/**/*_pb.rb"
+    - "proto_docs/**/*"
+    - "test/**/*"
+    - "acceptance/**/*"
+    - "Rakefile"
+
+Metrics/AbcSize:
+  Exclude:
+    - "lib/perxtech/ml/v1beta1/reward_recommendation/*.rb"
+Metrics/ClassLength:
+  Exclude:
+    - "lib/perxtech/ml/v1beta1/reward_recommendation/*.rb"
+Metrics/CyclomaticComplexity:
+  Exclude:
+    - "lib/perxtech/ml/v1beta1/reward_recommendation/*.rb"
+Metrics/LineLength:
+  Exclude:
+    - "lib/perxtech/ml/v1beta1/reward_recommendation/*.rb"
+    - "perxtech-ml.gemspec"
+Metrics/MethodLength:
+  Exclude:
+    - "lib/perxtech/ml/v1beta1/reward_recommendation/*.rb"
+Metrics/PerceivedComplexity:
+  Exclude:
+    - "lib/perxtech/ml/v1beta1/reward_recommendation/*.rb"
+Naming/FileName:
+  Exclude:
+    - "lib/perxtech-ml.rb"
+Style/CaseEquality:
+  Exclude:
+    - "lib/perxtech/ml/v1beta1/reward_recommendation/*.rb"
+    - "lib/perxtech/ml.rb"
+Style/ModuleFunction:
+  Enabled: false
