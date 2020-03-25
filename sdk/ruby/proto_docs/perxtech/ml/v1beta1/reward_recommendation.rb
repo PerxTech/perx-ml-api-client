@@ -28,12 +28,12 @@ module Perxtech
       #   @return [Array<String>]
       # @!attribute [rw] limit
       #   @return [Integer]
-      class GetRewardRecommendationRequest
+      class RewardRecommendationRequest
         include Google::Protobuf::MessageExts
         extend Google::Protobuf::MessageExts::ClassMethods
       end
 
-      # @!attribute [rw] recommended_reward_ids
+      # @!attribute [rw] reward_ids
       #   @return [Array<String>]
       class RewardRecommendationResponse
         include Google::Protobuf::MessageExts

@@ -16,7 +16,7 @@ module Perxtech
           self.unmarshal_class_method = :decode
           self.service_name = 'perxtech.ml.v1beta1.RewardRecommendation'
 
-          rpc :GetRecommendation, GetRewardRecommendationRequest, RewardRecommendationResponse
+          rpc :GetRecommendation, RewardRecommendationRequest, RewardRecommendationResponse
         end
 
         Stub = Service.rpc_stub_class

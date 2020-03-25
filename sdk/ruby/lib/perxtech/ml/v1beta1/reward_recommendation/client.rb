@@ -146,7 +146,7 @@ module Perxtech
 
           ##
           # @overload get_recommendation(request, options = nil)
-          #   @param request [Perxtech::Ml::V1beta1::GetRewardRecommendationRequest | Hash]
+          #   @param request [Perxtech::Ml::V1beta1::RewardRecommendationRequest | Hash]
           #   @param options [Gapic::CallOptions, Hash]
           #     Overrides the default settings for this call, e.g, timeout, retries, etc. Optional.
           #
@@ -168,7 +168,7 @@ module Perxtech
           def get_recommendation request, options = nil
             raise ArgumentError, "request must be provided" if request.nil?
 
-            request = Gapic::Protobuf.coerce request, to: Perxtech::Ml::V1beta1::GetRewardRecommendationRequest
+            request = Gapic::Protobuf.coerce request, to: Perxtech::Ml::V1beta1::RewardRecommendationRequest
 
             # Converts hash and nil to an options object
             options = Gapic::CallOptions.new(**options.to_h) if options.respond_to? :to_h

@@ -61,7 +61,7 @@ class Perxtech::Ml::V1beta1::RewardRecommendation::ClientTest < Minitest::Test
 
     get_recommendation_client_stub = ClientStub.new grpc_response, grpc_operation do |name, request, options:|
       assert_equal :get_recommendation, name
-      assert_kind_of Perxtech::Ml::V1beta1::GetRewardRecommendationRequest, request
+      assert_kind_of Perxtech::Ml::V1beta1::RewardRecommendationRequest, request
       assert_equal "hello world", request.tenant
       assert_equal "hello world", request.user_id
       assert_equal ["hello world"], request.reward_ids
@@ -88,7 +88,7 @@ class Perxtech::Ml::V1beta1::RewardRecommendation::ClientTest < Minitest::Test
       end
 
       # Use protobuf object
-      client.get_recommendation Perxtech::Ml::V1beta1::GetRewardRecommendationRequest.new(tenant: tenant, user_id: user_id, reward_ids: reward_ids, limit: limit) do |response, operation|
+      client.get_recommendation Perxtech::Ml::V1beta1::RewardRecommendationRequest.new(tenant: tenant, user_id: user_id, reward_ids: reward_ids, limit: limit) do |response, operation|
         assert_equal grpc_response, response
         assert_equal grpc_operation, operation
       end
@@ -100,7 +100,7 @@ class Perxtech::Ml::V1beta1::RewardRecommendation::ClientTest < Minitest::Test
       end
 
       # Use protobuf object with options
-      client.get_recommendation Perxtech::Ml::V1beta1::GetRewardRecommendationRequest.new(tenant: tenant, user_id: user_id, reward_ids: reward_ids, limit: limit), grpc_options do |response, operation|
+      client.get_recommendation Perxtech::Ml::V1beta1::RewardRecommendationRequest.new(tenant: tenant, user_id: user_id, reward_ids: reward_ids, limit: limit), grpc_options do |response, operation|
         assert_equal grpc_response, response
         assert_equal grpc_operation, operation
       end
